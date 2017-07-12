@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN" xml:lang="zh-CN">
+	<head>
+		<title>~main</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<style type="text/css" media="screen">
+		html, body { height:100%; background-color: #ffffff;}
+		body { margin:0; padding:0; overflow:hidden; }
+		#flashContent { width:100%; height:100%; }
+		</style>
+	</head>
+	<body>
+		<div id="upload"></div>
+        
+        <script type="text/javascript" src="../../swfobject.js"></script>
+        <script type="text/javascript">
+        	/* 必需要在服务器上才能生效 */
+		var flashvars = {
+			upurl : 'aHR0cDovL3Bhc3Nwb3J0Ljc2Ni5jb20vdXBsb2FkYXZhdGFy&callback=return_avatar',
+			defaultImagesData : { defaults : 'http://avatar.766.com/e6a6f257/a5c8/468c/8057/7f91403ddc18/b_avatar.jpg?0',compose :'http://avatar.766.com/e6a6f257/a5c8/468c/8057/7f91403ddc18/b_avatar.jpg?0' },
+			hisImagesData: [
+				{ defaults : './photo/userpic50.jpg' , compose : './photo/userpic50.jpg' },
+				{ defaults : './photo/userpic50.jpg' , compose : './photo/userpic50.jpg' },
+				{ defaults : './photo/userpic50.jpg' , compose : './photo/userpic50.jpg' }
+			],
+			callback	: function(data){alert(data)}
+		};
+		var params = { 
+			swliveconnect:"true" ,
+			menu		: "false" ,
+		    quality 	: 'height',
+		    allowscriptaccess : 'always',
+			wmode		: 'transparent'
+		};
+		var attributes = { id:"myCom", name:"myCom" };
+		swfobject.embedSWF("~main.swf", "upload", "500", "520", "9.0.0", "../../expressInstall.swf", flashvars, params, attributes, callbackFn);
+		
+		function callbackFn(status) {
+			if (status.success) {
+				var obj = status.ref;
+			}
+		};
+        </script>
+	</body>
+</html>

@@ -1,0 +1,106 @@
+<data>
+  <debug>0</debug><referral>paKBmbbkErZoHHeTy</referral><licence><![CDATA[!icw.KRyQk2MtG1i5'ACI{B{I)fS'18Q]]></licence>
+  <project_settings>
+    <width>960</width>
+    <height>360</height>
+  </project_settings>
+  <settings>
+    <folder_images>/img/javascript</folder_images>
+    <folder_fonts>fonts</folder_fonts>
+    <background>
+      <color transparent="true">0xffffff</color>
+      <image use_image="true" align_to="stage" align_pos="BC" x="0" y="0">
+        <url><![CDATA[senka-za-JS-slajd.png]]></url>
+      </image>
+    </background>
+    <start_slide>1</start_slide>
+    <auto_play>true</auto_play>
+    <randomize_slides>false</randomize_slides>
+    <pause_on_rollover>true</pause_on_rollover>
+    <branding align_to="stage" align_pos="TR" x="-10" y="10">
+      <remove_logo_loader>false</remove_logo_loader>
+      <remove_right_menu_info>false</remove_right_menu_info>
+      <remove_right_menu_licence>false</remove_right_menu_licence>
+    </branding>
+    <camera x="0" y="0" z="0" angleX="0" angleY="0" angleZ="0"/>
+  </settings>
+  <fonts/>
+  <preloader type="linear" align_to="stage" align_pos="MC" width="200" height="20" x="0" y="0">
+    <background padding="5">
+      <tweenShow tint="0x2185C5" alpha="0.85"/>
+      <tweenOver alpha="1"/>
+      <tweenHide alpha="0"/>
+    </background>
+    <loader>
+      <tweenShow tint="0xFFFFFF" alpha="0.8"/>
+      <tweenOver tint="0xFFFFFF" alpha="1"/>
+      <tweenHide tint="0xFFFFFF" alpha="0"/>
+    </loader>
+  </preloader>
+  <controls>
+    <prev_button align_to="stage" align_pos="ML" width="58.99998188018799" height="299.000301361084" x="0" y="-30.575000000000017">
+      <auto_hide time="3">false</auto_hide>
+      <hide_on_transition>true</hide_on_transition>
+      <background round_corners="0,0,0,0">
+        <tweenShow tint="0x000000" alpha="0" x="0" y="0" scaleX="1" scaleY="1"/>
+        <tweenOver tint="0x333333" alpha="0" x="0" y="0" scaleX="1" scaleY="1"/>
+        <tweenHide tint="0x000000" alpha="0" x="0" y="0" scaleX="0.6779663099088487" scaleY="0.13377912937851716"/>
+      </background>
+      <symbol type="5" align_pos="MC" x="0" y="0">
+        <tweenShow alpha="0.2" scaleX="2" scaleY="2" tint="0x333333"/>
+        <tweenOver tint="0x333333" scaleX="2" scaleY="2" alpha="0.5" x="0" y="0"/>
+        <tweenHide tint="0xFFFFFF" scaleX="0.85" scaleY="0.85" alpha="0"/>
+      </symbol>
+    </prev_button>
+    <next_button align_to="stage" align_pos="MR" width="60.99998474121094" height="300.0004005432129" x="0" y="-31.05000000000001">
+      <auto_hide time="3">false</auto_hide>
+      <hide_on_transition>true</hide_on_transition>
+      <background round_corners="0,0,0,0">
+        <tweenShow tint="0x000000" alpha="0" x="0" y="0" scaleX="1" scaleY="1"/>
+        <tweenOver tint="0x2185c5" alpha="0" x="0" y="0" scaleX="1" scaleY="1"/>
+        <tweenHide tint="0x000000" alpha="0" x="0" y="0" scaleX="0.6557378689469805" scaleY="0.13333315531436501"/>
+      </background>
+      <symbol type="5" align_pos="MC" x="0" y="0">
+        <tweenShow alpha="0.2" scaleX="2" scaleY="2" tint="0x333333"/>
+        <tweenOver tint="0x333333" scaleX="2" scaleY="2" alpha="0.5" x="0" y="0"/>
+        <tweenHide tint="0xFFFFFF" scaleX="0.85" scaleY="0.85" alpha="0"/>
+      </symbol>
+    </next_button>
+  </controls>
+  <defaults>
+    <slide time="5" color="0x000000">
+      <image align_pos="MC" x="0" y="0" scaleX="1" scaleY="1"/>
+      <link target="_blank"/>
+      <description>
+        <link target="_blank"/>
+      </description>
+    </slide>
+    <transition type="3D" columns="1" rows="1" type2D="slide" flipAngle="180" flipOrder="45" flipShader="none" flipOrderFromCenter="false" flipDirection="left" flipColor="0x878787" flipBoxDepth="10" flipDepth="50" flipEasing="Sine.easeOut" flipDuration=".6" flipDelay=".15"/>
+  </defaults>
+  <slides width="840" height="300" align_pos="TC" x="0" y="0" corner_TL="0,0" corner_TR="840,0" corner_BL="0,300" corner_BR="840,300">
+    <slide>
+      <url>http://getcu3er.com/img/javascript/1_JS2.jpg</url>
+      <link target="_self"/>
+      <description/>
+    </slide>
+    <transition rows="7" columns="1" flipRandomize="0.2" flipDelay="0.1" flipDirection="left,right" flipDepth="500" flipOrder="270"/>
+    <slide>
+      <url>http://getcu3er.com/img/javascript/1_JS2.jpg</url>
+      <link target="_blank"/>
+      <description/>
+    </slide>
+    <transition flipOrder="0" type="2D" flipDuration="1.2" flipRandomize="0"/>
+    <slide>
+      <url>http://getcu3er.com/img/javascript/1_JS2.jpg</url>
+      <link target="_blank"/>
+      <description/>
+    </slide>
+    <transition flipOrder="315" flipDirection="up,left,right,down" flipDepth="500" rows="3" columns="6" flipDelay="0.1" flipRandomize="0.15" flipBoxDepth="10"/>
+    <slide>
+      <url>http://getcu3er.com/img/javascript/1_JS2.jpg</url>
+      <link><![CDATA[http://getcu3er.com/pricing]]></link> 
+      <description/>
+    </slide>
+    <transition flipOrder="0" flipDirection="down" flipDepth="1000" rows="1" columns="1" flipDelay="0.1" flipRandomize="0.2" flipDuration="0.8"/>
+  </slides>
+</data>

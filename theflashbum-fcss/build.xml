@@ -1,0 +1,45 @@
+<?xml version="1.1"?>
+<project name="FCSS" basedir="." default="full-build">
+    
+    <!-- identify properties file -->
+    <property file="build.properties" />
+
+    <!-- Set up FlexUnit Ant tasks -->
+    <taskdef resource="flexUnitTasks.tasks" classpath="${lib.loc}/flexUnitTasks.jar" />
+
+    <!-- Add the ant-contrib tasks -->
+    <taskdef resource="net/sf/antcontrib/antcontrib.properties" classpath="${lib.loc}/ant-contrib.jar" />
+
+    <import file="${includes.loc}/misc.xml" />
+    <import file="${includes.loc}/test.xml" />
+    <import file="${includes.loc}/asdoc.xml" />
+    <import file="${includes.loc}/compile-swc.xml" />
+    <!--<import file="${includes.loc}/apparat.xml" />-->
+
+    <target name="usage" depends="misc.usage" description="Prints usage message" />
+
+    <target name="test" depends="test.run" description="Runs unit tests and displays the report"/>
+
+    <target name="asdoc" depends="asdoc.gen" description="generates ASDoc"/>
+
+    <target name="compile" description="Compiles the project as a swc">
+        <!--check for compiler flag: normal compile vs apparat compile-->
+        <if>
+            <equals arg1="apparat" arg2="${compile.type}" casesensitive="false" />
+            <then>
+                <runtarget target="compile-swc.clean-bin" />
+                <runtarget target="apparat.compile" />
+            </then>
+
+            <else>
+                <runtarget target="compile-swc.compile" />
+            </else>
+        </if>
+    </target>
+
+    <target name="full-build" depends="test,compile" description="Runs tests, compiles project, and optionally runs it.">
+    </target>
+
+    <target name="deploy-lib" description="Prepares swf lib and moves it to deploy directory" depends="compile-swc.deploy"/>
+    
+</project>

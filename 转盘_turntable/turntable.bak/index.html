@@ -1,0 +1,144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script src="swfobject.js" type="text/javascript"></script>
+</head>
+
+<body>
+<div id="turntable"></div>
+<script type="text/javascript">
+		var obj = null;
+		function oninit()
+					   {
+                            var arr = [
+                                    {name:"CSOL T恤",index:"1827"},
+                                    {name:"谢谢参与",index:"0"},
+                                    {name:"CSOL背包",index:"1826"},
+                                    {name:"谢谢参与",index:"0"},
+                                    {name:"地狱狂蛇鼠标",index:"1825"},
+                                    {name:"谢谢参与",index:"0"},
+                                    {name:"谢谢参与",index:"0"},
+                                    {name:"谢谢参与",index:"0"},
+                                    {name:"西伯利亚耳机",index:"1824"},
+                                    {name:"谢谢参与",index:"0"},
+									{name:"iPhone 4S",index:"1823"},
+                                    {name:"谢谢参与",index:"0"}
+                                ];
+							console.log(arr);
+                            obj.init(arr,'onstart','onend');
+                        }
+                        function onstart(){
+							
+							var data = { index : 1826 , flag : 1 , qflag : 3};
+							console.log(data);
+							if(data.login==0)
+							{
+								$.popLogin();
+								return ;	
+							}
+							if(data.flag==0)
+							{
+								$.showMsg(data.msg,1);
+								return ;	
+							}
+							if(data.flag==1)
+							{	
+								if(data.index==0)
+									obj.start(data.index,'noPrize');
+								
+								
+								if(data.qflag==3)
+								{
+									//$("#giftNameDiv").html(data.giftName);
+									//alert('start')
+									obj.start(data.index,'prizeDiv');
+								}
+								//$.showMsg(data.msg,3);
+								//thisMovie("game").start(data.index,'test2');
+							}
+								/*jQuery.ajax({ 
+									type: "POST", 
+									url: "index.php?do=Prize", 
+									dataType:"json",
+									error:function(){alert('您没有权限！');},
+									success: function(data)
+									{
+										if(data.login==0)
+										{
+											$.popLogin();
+											return ;	
+										}
+										if(data.flag==0)
+										{
+											$.showMsg(data.msg,1);
+											return ;	
+										}
+										if(data.flag==1)
+										{	
+											if(data.index==0)
+												obj.start(data.index,'noPrize');
+											
+											
+											if(data.qflag==3)
+											{
+												$("#giftNameDiv").html(data.giftName);
+												obj.start(data.index,'prizeDiv');
+											}
+											//$.showMsg(data.msg,3);
+											//thisMovie("game").start(data.index,'test2');
+										}
+									}
+								});	*/
+							
+						}
+						function noPrize()
+						{
+							$.showMsg("很遗憾您本次没有抽中任何物品!",1);
+						}
+						
+						
+						function prizeDiv()
+						{
+							var html  = $("#userInfoDiv").html();
+							alert('')
+							//$.infoBox();
+						}
+                        function onend()
+						{}
+						
+/* 必需要在服务器上才能生效 */
+		var flashvars = {
+			onready : 'oninit'
+		};
+		var params = { 
+			swliveconnect:"true" ,
+			menu		: "false" ,
+		    quality 	: 'height',
+		    allowscriptaccess : 'always',
+			wmode		: 'transparent'
+		};
+		var attributes = { id:"turntable", name:"turntable" };
+		swfobject.embedSWF("~game.swf", "turntable", "475", "490", "9.0.0", "expressInstall.swf", flashvars, params, attributes, callbackFn);
+
+		function callbackFn(status) {
+			if (status.success) {
+				obj = status.ref;
+				
+			}
+		};
+</script>
+
+<!--<object width="570" height="460" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" id="game">
+                          <param name="movie" value="~game.swf">
+                          <param name="quality" value="high">
+                          <param name="allowScriptAccess" value="always" />
+                          <param name="wmode" value="transparent">
+                          <param name="flashvars" value="onready=oninit">
+                          <embed width="570" height="460" src="~game.swf" flashvars="onready=oninit" quality="high" wmode="transparent" allowScriptAccess="always" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" name="game">
+                        </object>-->
+
+
+</body>
+</html>

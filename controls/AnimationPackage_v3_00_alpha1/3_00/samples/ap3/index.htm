@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de">
+<head>
+<title>AnimationPackage</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link href="ap_style.css" rel="stylesheet" type="text/css"/>
+
+<meta name="Keywords" content="AnimationPackage, animation package, tweening with actionscript, Uhlmann, Alex, Alexander, ActionScript 2.0 library, Macromedia Flash, animations, drawing, easing, tween engine, super shape, SuperShape, move on curve, move on path, bezier curve,"/>
+<meta name="Description" content="AnimationPackage is an ActionScript 2.0 library compatible to Flash Player 6 and above. It helps Flash developers to create powerful, maintainable  animations in an efficient and easy way, resulting in small file sizes."/>
+<meta name="author" content="Alex Uhlmann"/>
+<meta name="publisher" content="Alex Uhlmann"/>
+<meta name="distribution" content="global"/>
+<meta name="robots" content="all"/>
+<meta name="robots" content="index,follow" />
+<meta name="revisit-after" content="10 days"/>
+
+<script type="text/javascript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//-->
+</script>
+<script src="AC_OETags.js" language="javascript"></script>
+<style>
+body { margin: 0px; overflow:hidden }
+</style>
+<script language="JavaScript" type="text/javascript">
+<!--
+// -----------------------------------------------------------------------------
+// Globals
+// Major version of Flash required
+var requiredMajorVersion = 9;
+// Minor version of Flash required
+var requiredMinorVersion = 0;
+// Minor version of Flash required
+var requiredRevision = 0;
+// -----------------------------------------------------------------------------
+// -->
+</script>
+</head>
+<body>
+<div id="logo">
+	<p><a href="http://www.alex-uhlmann.de/flash/animationpackage/"><img src="images/logo_ap_framed.gif" alt="AnimationPackage" width="324" height="94" style="border:0"/></a></p>
+</div>
+<div id="content">
+  <p>&nbsp;</p>
+  <p>AnimationPackage 3 is an ActionScript 3 library compatible to Flash Player 9. It helps you to create powerful, maintainable  animations and primitive shapes in an efficient and easy way, resulting in small file sizes. </p>
+  <p>Like all versions of AnimationPackage, this version 3 is independent of the Flex 2 Framework. If you are able to use the Flex 2 Framework, I recommend you consider using its Flex 2  Effects Framework API or extentions of it, instead of AnimationPackage.</p>
+  <p><span class="link"><a href="download/AnimationPackage_v3_00_alpha1.zip">Download AnimationPackage 3 Alpha 1</a></span> (ActionScript 3, Flash Player 9)</p>
+  <p> SuperShape Sample </p>
+  <div align="left">
+    <script language="JavaScript" type="text/javascript" src="history.js"></script>
+  
+  <script language="JavaScript" type="text/javascript">
+<!--
+// Version check for the Flash Player that has the ability to start Player Product Install (6.0r65)
+var hasProductInstall = DetectFlashVer(6, 0, 65);
+
+// Version check based upon the values defined in globals
+var hasRequestedVersion = DetectFlashVer(requiredMajorVersion, requiredMinorVersion, requiredRevision);
+
+
+// Check to see if a player with Flash Product Install is available and the version does not meet the requirements for playback
+if ( hasProductInstall && !hasRequestedVersion ) {
+	// MMdoctitle is the stored document.title value used by the installation process to close the window that started the process
+	// This is necessary in order to close browser windows that are still utilizing the older version of the player after installation has completed
+	// DO NOT MODIFY THE FOLLOWING FOUR LINES
+	// Location visited after installation is complete if installation is required
+	var MMPlayerType = (isIE == true) ? "ActiveX" : "PlugIn";
+	var MMredirectURL = window.location;
+    document.title = document.title.slice(0, 47) + " - Flash Player Installation";
+    var MMdoctitle = document.title;
+
+	AC_FL_RunContent(
+		"src", "playerProductInstall",
+		"FlashVars", "MMredirectURL="+MMredirectURL+'&MMplayerType='+MMPlayerType+'&MMdoctitle='+MMdoctitle+"",
+		"width", "100%",
+		"height", "100%",
+		"align", "middle",
+		"id", "AnimationPackage3",
+		"quality", "high",
+		"bgcolor", "#869ca7",
+		"name", "AnimationPackage3",
+		"allowScriptAccess","sameDomain",
+		"type", "application/x-shockwave-flash",
+		"pluginspage", "http://www.adobe.com/go/getflashplayer"
+	);
+} else if (hasRequestedVersion) {
+	// if we've detected an acceptable version
+	// embed the Flash Content SWF when all tests are passed
+	AC_FL_RunContent(
+			"src", "AnimationPackage3",
+			"width", "100%",
+			"height", "100%",
+			"align", "middle",
+			"id", "AnimationPackage3",
+			"quality", "high",
+			"bgcolor", "#869ca7",
+			"name", "AnimationPackage3",
+			"flashvars",'historyUrl=history.htm%3F&lconid=' + lc_id + '',
+			"allowScriptAccess","sameDomain",
+			"type", "application/x-shockwave-flash",
+			"pluginspage", "http://www.adobe.com/go/getflashplayer"
+	);
+  } else {  // flash is too old or we can't detect the plugin
+    var alternateContent = 'Alternate HTML content should be placed here. '
+  	+ 'This content requires the Adobe Flash Player. '
+   	+ '<a href=http://www.adobe.com/go/getflash/>Get Flash</a>';
+    document.write(alternateContent);  // insert non-flash content
+  }
+// -->
+  </script>
+    <noscript>
+  	  <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="500" height="375"
+			codebase="http://fpdownload.macromedia.com/get/flashplayer/current/swflash.cab">
+		      <param name="movie" value="AnimationPackage3.swf" />
+		      <param name="quality" value="high" />
+		      <param name="bgcolor" value="#869ca7" />
+		      <param name="allowScriptAccess" value="sameDomain" />
+		      <embed src="AnimationPackage3.swf" quality="high" bgcolor="#869ca7"
+				width="100%" height="100%" name="AnimationPackage3" align="middle"
+				play="true"
+				loop="false"
+				quality="high"
+				allowScriptAccess="sameDomain"
+				type="application/x-shockwave-flash"
+				pluginspage="http://www.adobe.com/go/getflashplayer">
+		      </embed>
+      </object>
+    </noscript>
+  </div>
+  <p>
+  <iframe name="_history" src="history.htm" frameborder="0" scrolling="no" width="22" height="0"></iframe>
+</p>
+<p>
+  <iframe name="_history" src="history.htm" frameborder="0" scrolling="no" width="22" height="0"></iframe>
+</p>
+<p>
+  <iframe name="_history" src="history.htm" frameborder="0" scrolling="no" width="22" height="0"></iframe>
+</p>
+<p>
+  <iframe name="_history" src="history.htm" frameborder="0" scrolling="no" width="22" height="0"></iframe>
+</p>
+<p>
+  <iframe name="_history" src="history.htm" frameborder="0" scrolling="no" width="22" height="0">  </iframe>
+</p>
+</div>
+<div id="script">
+  <p>creating powerful animations fast.<br />
+  </p>
+</div>
+</body>
+</html>

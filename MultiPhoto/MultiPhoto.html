@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+
+<body>
+<div id="content"></div>
+
+<div style="position:relative; height:100px; width:100px;">xx<div style="background:#fff; position:absolute; left:0; top:0; width:100%; height:100%; opacity:0.5; filter:alpha(opacity=50)"></div></div>
+<input id="upload"  type="button" value="upload"/>
+
+<script type="text/javascript" src="jquery/jquery-1.4.3.min.js" ></script>
+<script type="text/javascript" src="../swfobject.js"></script>
+<script type="text/javascript">
+	/* 必需要在服务器上才能生效 */
+		var flashvars = {
+	
+		};
+		var params = { 
+			swliveconnect:"true" ,
+			menu		: "false" ,
+		    quality 	: 'height',
+		    allowscriptaccess : 'always'
+		};
+		var attributes = { id:"MultiPhoto", name:"MultiPhoto" };
+		swfobject.embedSWF("MultiPhoto_111018.swf", "content", "475", "165", "9.0.0", "../expressInstall.swf", flashvars, params, attributes, callbackFn);
+		
+		
+		/*function AStoJSviaExternalInterface(str) {
+			document.getElementById("receive1").value = str;
+		}
+		function myCom_DoFSCommand(command, args) {
+  			document.getElementById("receive2").value = args;
+		}
+		function AStoJSviaGetURL(str) {
+			document.getElementById("receive3").value = str;
+		}*/
+		
+		//document.MultiPhoto.multiPic_clearStage()
+		//uploadCall
+		function callbackFn(status) {
+			if (status.success) {
+				var obj = status.ref;
+				
+				document.getElementById("upload").onclick = function() {
+					
+					//alert(obj.multiPic_clearStage)
+
+					if (obj && typeof obj.multiPic_startSave!= "undefined") {
+						obj.multiPic_startSave('upload.php',"_flash_multiUploadCall");
+					}
+				};
+				
+				
+			}
+		};
+		function _flash_MultiLoaded(){alert('')}
+		
+		function _flash_resizeFlashHeight(a){
+			document.MultiPhoto.height = 1*a;
+		}
+	//$('input[type=button]').click(function(){
+	//	document.MultiPhoto.multiPic_startSave('http://upload.t.qq.com',"_flash_multiUploadCall");
+	//})
+</script>
+</body>
+</html>

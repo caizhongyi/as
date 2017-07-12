@@ -1,0 +1,129 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+
+<script type="text/javascript" src="jquery-1.7.2.min.js" ></script>
+<script type="text/javascript" src="swfobject.js"></script>
+<script type="text/javascript" src="jquery.cu3er.js"></script>
+</head>
+
+<body>
+<div id="CU3ER-holder"></div>
+
+<script type="text/javascript">
+
+				function showJavascript() {
+				
+					$("#CU3ER-holder").html('<div id="CU3ER-js" style="margin: 0 !important; height:360px;"><p>If you do not see content of CU3ER slider here try to enable JavaScript and reload the page</p></div>');
+					
+					$("#CU3ER-js").cu3er({
+					  vars: {
+						width: 960,
+						height: 360, 
+						flash_version : "10.0.0",
+						force_javascript:true,
+						xml_location : 'javascript.xml',						
+						swf_location: 'CU3ER.swf'
+					  },
+					  params: {
+						wmode: 'transparent'
+					  },
+					  attributes: {
+						name: "CU3ER-js"
+					  },
+					  onSliderInit : function() {
+						var flashStr = "";
+				
+						if (CU3ER['CU3ER-js'].hasFlash) {
+							flashStr = " <a href='javascript:showFlash();'>Click here to enable Flash version.</a>";
+						} else {
+							flashStr = " The best possible version since you do not have Flash Player installed.";
+						}
+						switch (CU3ER['CU3ER-js'].displayVersion) {
+							case "Flash":
+								$("#info-txt").html("You are now seeing <strong>CU3ER Flash</strong> version. <a href='javascript:showJavascript();'>Click here to disable Flash version and force Javascript version.</a>");
+							break;
+							case "JS-3D":
+								$("#info-txt").html("You are now seeing <strong>CU3ER Javascript 3D</strong> version."+flashStr);
+							break;
+							case "JS-Slicing":
+								$("#info-txt").html("You are now seeing <strong>CU3ER Javascript Slicing</strong> version, best CU3ER Javascript version your browser can display.<br/>Try Chrome or Safari to see Javascript 3D version of CU3ER."+flashStr);
+							break;
+							case "JS-Simple":
+								$("#info-txt").html("You are now seeing <strong>CU3ER Javascript Simple</strong> version, best CU3ER Javascript version your browser can display."+flashStr);
+							break;
+						} 
+					  }
+					});
+					
+				}
+				
+				
+				
+				function showFlash() {
+					$("#CU3ER-holder").html('<div id="CU3ER-flash" style="margin: 0 !important; height:360px;"><p>If you do not see content of CU3ER slider here try to enable JavaScript and reload the page</p></div>');
+					$("#CU3ER-flash").cu3er({
+					  vars: {
+						width: 960,
+						height: 360, 
+						flash_version : "10.0.0",
+						xml_location : 'javascript.xml',						
+						swf_location: 'CU3ER.swf'
+					  },
+					  params: {
+						wmode: 'transparent'
+					  },
+					  attributes: {
+						name: "CU3ER-flash"
+					  },
+					  onSliderInit: function() {
+						var flashStr = "";
+						if (CU3ER['CU3ER-flash'].hasFlash) {
+							flashStr = " <a href='javascript:showFlash();'>Click here to enable Flash version.</a>";
+						} else {
+							flashStr = " This is best possible version since you do not have Flash Player installed.";
+						}
+						switch (CU3ER['CU3ER-flash'].displayVersion) {
+							case "Flash":
+								if (jQuery.browser.msie && jQuery.browser.version >= 8) {
+									$("#info-txt").html("You are now seeing <strong>CU3ER Flash</strong> version.");
+								} else {
+									$("#info-txt").html("You are now seeing <strong>CU3ER Flash</strong> version. <a href='javascript:showJavascript();'>Click here to disable Flash version and force Javascript version.</a>");
+								}
+							break;
+							case "JS-3D":
+								$("#info-txt").html("You are now seeing <strong>CU3ER Javascript 3D</strong> version."+flashStr);
+							break;
+							case "JS-Slicing":
+								$("#info-txt").html("You are now seeing <strong>CU3ER Javascript Slicing</strong> version, best CU3ER Javascript version your browser can display.<br/>Try Chrome or Safari to see Javascript 3D version of CU3ER."+flashStr);
+							break;
+							case "JS-Simple":
+								$("#info-txt").html("You are now seeing <strong>CU3ER Javascript Simple</strong> version, best CU3ER JS version your browser can display."+flashStr);
+							break;
+						} 
+					  }
+					});
+				}
+
+			  jQuery(document).ready(function($) {
+			  	/* $("a[rel^='prettyPhoto']").prettyPhoto({
+					animationSpeed:'slow',
+					theme:'light_rounded',
+					default_width: 960,
+					opacity: 0.60,
+					default_height: 344
+				}); */
+				
+				showJavascript();
+				
+				
+			  });
+
+			</script>
+	</body>
+</html>
+
+		
